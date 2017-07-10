@@ -1,9 +1,9 @@
 <map version="freeplane 1.6.0">
 <!--To view this file, download free mind mapping software Freeplane from http://freeplane.sourceforge.net -->
-<node TEXT="whNewsreader" FOLDED="false" ID="ID_518515863" CREATED="1498925178169" MODIFIED="1499693794271" LINK="https://github.com/WetHat/freeplane-addon-newsreader" BACKGROUND_COLOR="#97c7dc" STYLE="combined" UNIFORM_SHAPE="true" MAX_WIDTH="360.0 pt" MIN_WIDTH="20.0 pt">
+<node TEXT="whNewsreader" FOLDED="false" ID="ID_518515863" CREATED="1498925178169" MODIFIED="1499695979972" LINK="https://github.com/WetHat/freeplane-addon-newsreader" BACKGROUND_COLOR="#97c7dc" STYLE="combined" UNIFORM_SHAPE="true" MAX_WIDTH="360.0 pt" MIN_WIDTH="20.0 pt">
 <font SIZE="16" BOLD="true" ITALIC="true"/>
 <hook NAME="MapStyle">
-    <properties show_icon_for_attributes="true" fit_to_viewport="false;" show_note_icons="true" edgeColorConfiguration="#808080ff,#000000ff,#ff0033ff,#009933ff,#3333ffff,#ff6600ff,#cc00ccff,#ffbf00ff,#00ff99ff,#0099ffff,#996600ff,#000000ff,#cc0066ff,#33ff00ff,#ff9999ff,#0000ccff,#cccc00ff,#0099ccff,#006600ff,#ff00ccff,#00cc00ff,#0066ccff,#00ffffff"/>
+    <properties fit_to_viewport="false;" show_icon_for_attributes="true" show_note_icons="true" edgeColorConfiguration="#808080ff,#000000ff,#ff0033ff,#009933ff,#3333ffff,#ff6600ff,#cc00ccff,#ffbf00ff,#00ff99ff,#0099ffff,#996600ff,#000000ff,#cc0066ff,#33ff00ff,#ff9999ff,#0000ccff,#cccc00ff,#0099ccff,#006600ff,#ff00ccff,#00cc00ff,#0066ccff,#00ffffff"/>
 
 <map_styles>
 <stylenode LOCALIZED_TEXT="styles.root_node" STYLE="oval" UNIFORM_SHAPE="true" VGAP_QUANTITY="24.0 pt" TEXT_SHORTENED="true">
@@ -115,7 +115,7 @@
 <hook NAME="AutomaticEdgeColor" COUNTER="0" RULE="FOR_COLUMNS"/>
 <attribute_layout NAME_WIDTH="95.16521818049237 pt" VALUE_WIDTH="345.60000286599865 pt"/>
 <attribute NAME="name" VALUE="whNewsreader"/>
-<attribute NAME="version" VALUE="0.1.1"/>
+<attribute NAME="version" VALUE="0.1.2"/>
 <attribute NAME="author" VALUE="WetHat"/>
 <attribute NAME="freeplaneVersionFrom" VALUE="1.5.20"/>
 <attribute NAME="freeplaneVersionTo" VALUE=""/>
@@ -157,7 +157,7 @@
 </html>
 
 </richcontent>
-<node TEXT="description" POSITION="left" ID="ID_572094998" CREATED="1498925202742" MODIFIED="1499693705784"><richcontent TYPE="NOTE">
+<node TEXT="description" POSITION="left" ID="ID_572094998" CREATED="1498925202742" MODIFIED="1499695980005"><richcontent TYPE="NOTE">
 
 <html>
   <head>
@@ -228,7 +228,7 @@
 <font BOLD="false"/>
 </node>
 </node>
-<node TEXT="changes" POSITION="left" ID="ID_1937288719" CREATED="1498925202742" MODIFIED="1499693705784"><richcontent TYPE="NOTE">
+<node TEXT="changes" POSITION="left" ID="ID_1937288719" CREATED="1498925202742" MODIFIED="1499695980009"><richcontent TYPE="NOTE">
 
 <html>
   <head>
@@ -242,6 +242,21 @@
 </html>
 
 </richcontent>
+<node TEXT="0.1.2" ID="ID_1551676569" CREATED="1499693389052" MODIFIED="1499696994430"><richcontent TYPE="NOTE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      Submenu localization fixed
+    </p>
+  </body>
+</html>
+
+</richcontent>
+</node>
 <node TEXT="0.1.1" ID="ID_488307661" CREATED="1499693389052" MODIFIED="1499693446450"><richcontent TYPE="NOTE">
 
 <html>
@@ -254,7 +269,6 @@
     </p>
   </body>
 </html>
-
 </richcontent>
 </node>
 <node TEXT="0.1.0" ID="ID_1076447653" CREATED="1499680305466" MODIFIED="1499680446148"><richcontent TYPE="NOTE">
@@ -283,7 +297,7 @@
 </richcontent>
 </node>
 </node>
-<node TEXT="license" FOLDED="true" POSITION="left" ID="ID_1849949559" CREATED="1498925202742" MODIFIED="1499693705800"><richcontent TYPE="NOTE">
+<node TEXT="license" FOLDED="true" POSITION="left" ID="ID_1849949559" CREATED="1498925202742" MODIFIED="1499695980009"><richcontent TYPE="NOTE">
 
 <html>
   <head>
@@ -339,7 +353,7 @@
 </richcontent>
 </node>
 </node>
-<node TEXT="preferences.xml" POSITION="left" ID="ID_950925147" CREATED="1498925202758" MODIFIED="1499693705800"><richcontent TYPE="NOTE">
+<node TEXT="preferences.xml" POSITION="left" ID="ID_950925147" CREATED="1498925202758" MODIFIED="1499695980009"><richcontent TYPE="NOTE">
 
 <html>
   <head>
@@ -357,7 +371,7 @@
 
 </richcontent>
 </node>
-<node TEXT="default.properties" POSITION="left" ID="ID_924550804" CREATED="1498925202778" MODIFIED="1499693705800"><richcontent TYPE="NOTE">
+<node TEXT="default.properties" POSITION="left" ID="ID_924550804" CREATED="1498925202778" MODIFIED="1499695980009"><richcontent TYPE="NOTE">
 
 <html>
   <head>
@@ -372,7 +386,7 @@
 
 </richcontent>
 </node>
-<node TEXT="translations" POSITION="left" ID="ID_1784907094" CREATED="1498925202780" MODIFIED="1499693705815"><richcontent TYPE="NOTE">
+<node TEXT="translations" POSITION="left" ID="ID_1784907094" CREATED="1498925202780" MODIFIED="1499695980025"><richcontent TYPE="NOTE">
 
 <html>
   <head>
@@ -397,7 +411,7 @@
 </html>
 
 </richcontent>
-<node TEXT="en" ID="ID_926511279" CREATED="1498925202780" MODIFIED="1499688267751" MAX_WIDTH="240.0 pt">
+<node TEXT="en" ID="ID_926511279" CREATED="1498925202780" MODIFIED="1499696568783" MAX_WIDTH="240.0 pt">
 <attribute_layout NAME_WIDTH="159.65217523701025 pt" VALUE_WIDTH="159.65217523701025 pt"/>
 <attribute NAME="addons.${name}" VALUE="WetHat Newsreader"/>
 <attribute NAME="addon.${name}.RssUpdate" VALUE="Update Newsfeeds"/>
@@ -407,7 +421,7 @@
 <attribute NAME="addons.RSS" VALUE="RSS News"/>
 </node>
 </node>
-<node TEXT="deinstall" POSITION="left" ID="ID_546131246" CREATED="1498925202827" MODIFIED="1499693705815" MAX_WIDTH="240.0 pt"><richcontent TYPE="NOTE">
+<node TEXT="deinstall" POSITION="left" ID="ID_546131246" CREATED="1498925202827" MODIFIED="1499695980025" MAX_WIDTH="240.0 pt"><richcontent TYPE="NOTE">
 
 <html>
   <head>
@@ -431,7 +445,7 @@
 <attribute NAME="delete" VALUE="${installationbase}/resources/images/whNewsreader-screenshot-1.png"/>
 <attribute NAME="delete" VALUE="${installationbase}/resources/images/whNewsreader.png"/>
 </node>
-<node TEXT="scripts" POSITION="right" ID="ID_487239182" CREATED="1498925202843" MODIFIED="1499693705815"><richcontent TYPE="NOTE">
+<node TEXT="scripts" POSITION="right" ID="ID_487239182" CREATED="1498925202843" MODIFIED="1499695980041"><richcontent TYPE="NOTE">
 
 <html>
   <head>
@@ -553,10 +567,10 @@
 </html>
 
 </richcontent>
-<node TEXT="RssNewChannel.groovy" ID="ID_678499988" CREATED="1499676857153" MODIFIED="1499687034740" MAX_WIDTH="360.0 pt">
+<node TEXT="RssNewChannel.groovy" ID="ID_678499988" CREATED="1499676857153" MODIFIED="1499696727538" MAX_WIDTH="360.0 pt">
 <attribute_layout NAME_WIDTH="180.3130449735645 pt" VALUE_WIDTH="180.3130449735645 pt"/>
 <attribute NAME="menuTitleKey" VALUE="addon.${name}.RssNewChannel"/>
-<attribute NAME="menuLocation" VALUE="main_menu_scripting/RSS"/>
+<attribute NAME="menuLocation" VALUE="main_menu_scripting/addons.RSS"/>
 <attribute NAME="executionMode" VALUE="on_single_node"/>
 <attribute NAME="keyboardShortcut" VALUE=""/>
 <attribute NAME="execute_scripts_without_asking" VALUE="true"/>
@@ -565,10 +579,10 @@
 <attribute NAME="execute_scripts_without_exec_restriction" VALUE="false"/>
 <attribute NAME="execute_scripts_without_network_restriction" VALUE="false"/>
 </node>
-<node TEXT="RssNewChannelGroup.groovy" ID="ID_613801656" CREATED="1499677050313" MODIFIED="1499687025761" MAX_WIDTH="360.0 pt">
+<node TEXT="RssNewChannelGroup.groovy" ID="ID_613801656" CREATED="1499677050313" MODIFIED="1499696730256" MAX_WIDTH="360.0 pt">
 <attribute_layout NAME_WIDTH="180.3130449735645 pt" VALUE_WIDTH="180.3130449735645 pt"/>
 <attribute NAME="menuTitleKey" VALUE="addon.${name}.RssNewChannelGroup"/>
-<attribute NAME="menuLocation" VALUE="main_menu_scripting/RSS"/>
+<attribute NAME="menuLocation" VALUE="main_menu_scripting/addons.RSS"/>
 <attribute NAME="executionMode" VALUE="on_single_node"/>
 <attribute NAME="keyboardShortcut" VALUE=""/>
 <attribute NAME="execute_scripts_without_asking" VALUE="true"/>
@@ -577,10 +591,10 @@
 <attribute NAME="execute_scripts_without_exec_restriction" VALUE="false"/>
 <attribute NAME="execute_scripts_without_network_restriction" VALUE="false"/>
 </node>
-<node TEXT="RssToggleRead.groovy" ID="ID_194118374" CREATED="1499677050313" MODIFIED="1499686993061" MAX_WIDTH="360.0 pt">
+<node TEXT="RssToggleRead.groovy" ID="ID_194118374" CREATED="1499677050313" MODIFIED="1499696737596" MAX_WIDTH="360.0 pt">
 <attribute_layout NAME_WIDTH="180.3130449735645 pt" VALUE_WIDTH="180.3130449735645 pt"/>
 <attribute NAME="menuTitleKey" VALUE="addon.${name}.RssToggleRead"/>
-<attribute NAME="menuLocation" VALUE="main_menu_scripting/RSS"/>
+<attribute NAME="menuLocation" VALUE="main_menu_scripting/addons.RSS"/>
 <attribute NAME="executionMode" VALUE="on_single_node"/>
 <attribute NAME="keyboardShortcut" VALUE="control F5"/>
 <attribute NAME="execute_scripts_without_asking" VALUE="true"/>
@@ -589,10 +603,10 @@
 <attribute NAME="execute_scripts_without_exec_restriction" VALUE="false"/>
 <attribute NAME="execute_scripts_without_network_restriction" VALUE="false"/>
 </node>
-<node TEXT="RssUpdate.groovy" ID="ID_307460605" CREATED="1499677050328" MODIFIED="1499687067682" MAX_WIDTH="360.0 pt">
+<node TEXT="RssUpdate.groovy" ID="ID_307460605" CREATED="1499677050328" MODIFIED="1499696816012" MAX_WIDTH="360.0 pt">
 <attribute_layout NAME_WIDTH="180.3130449735645 pt" VALUE_WIDTH="180.3130449735645 pt"/>
 <attribute NAME="menuTitleKey" VALUE="addon.${name}.RssUpdate"/>
-<attribute NAME="menuLocation" VALUE="main_menu_scripting/RSS"/>
+<attribute NAME="menuLocation" VALUE="main_menu_scripting/addons.RSS"/>
 <attribute NAME="executionMode" VALUE="on_selected_node_recursively"/>
 <attribute NAME="keyboardShortcut" VALUE="F5"/>
 <attribute NAME="execute_scripts_without_asking" VALUE="true"/>
@@ -602,7 +616,7 @@
 <attribute NAME="execute_scripts_without_network_restriction" VALUE="true"/>
 </node>
 </node>
-<node TEXT="lib" POSITION="right" ID="ID_1600315449" CREATED="1498925202858" MODIFIED="1499693705831"><richcontent TYPE="NOTE">
+<node TEXT="lib" POSITION="right" ID="ID_1600315449" CREATED="1498925202858" MODIFIED="1499695980110"><richcontent TYPE="NOTE">
 
 <html>
   <head>
@@ -641,7 +655,7 @@
 
 </richcontent>
 </node>
-<node TEXT="zips" POSITION="right" ID="ID_1885171384" CREATED="1498925202858" MODIFIED="1499693705831" MAX_WIDTH="240.0 pt"><richcontent TYPE="NOTE">
+<node TEXT="zips" POSITION="right" ID="ID_1885171384" CREATED="1498925202858" MODIFIED="1499695980125" MAX_WIDTH="240.0 pt"><richcontent TYPE="NOTE">
 
 <html>
   <head>
@@ -680,7 +694,7 @@
 
 </richcontent>
 </node>
-<node TEXT="images" POSITION="right" ID="ID_1329813446" CREATED="1498925202878" MODIFIED="1499693705831"><richcontent TYPE="NOTE">
+<node TEXT="images" POSITION="right" ID="ID_1329813446" CREATED="1498925202878" MODIFIED="1499695980125"><richcontent TYPE="NOTE">
 
 <html>
   <head>
