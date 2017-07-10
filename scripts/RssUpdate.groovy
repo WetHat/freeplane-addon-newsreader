@@ -25,7 +25,7 @@ if (   node['Node Type'] == 'RSSchannel'
      def feedXml = node.link.text.toURL().getText([
                                                     requestProperties: ['User-Agent': 'Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1)']
                                                   ],'utf-8')
-     logger.info(feedXml)
+     //logger.info(feedXml)
      
      def slurper = new XmlSlurper()
      slurper.setFeature("http://apache.org/xml/features/disallow-doctype-decl", false) 
@@ -34,6 +34,8 @@ if (   node['Node Type'] == 'RSSchannel'
   }
   catch (all) {
     logger.severe("Unable to obtain feed XML object model",all)
+    // add the exception summary to the node
+    node.text = "<html><body><p><font color=\"#ff0000\"><b>Could not load feed</font>:</b></p><p>${all}</p></body></html>"
   }
 
   if (rss != null) {
