@@ -33,9 +33,11 @@ if (   node['Node Type'] == 'RSSchannel'
      rss = slurper.parseText(feedXml).declareNamespace(content:'http://purl.org/rss/1.0/modules/content/')       
   }
   catch (all) {
-    logger.severe("Unable to obtain feed XML object model",all)
+    logger.severe("Unable to obtain feed XML object model from (${node.link.text}):",all)
+    
     // add the exception summary to the node
-    node.text = "<html><body><p><font color=\"#ff0000\"><b>Could not load feed</font>:</b></p><p>${all}</p></body></html>"
+    node.text = "<html><body><p><font color=\"#ff0000\"><b>Could not load feed!</font></b></p></body></html>"
+    node.note = "<html><body><p><b>Feed url</b>: ${node.link.text}</p><p><b>Exception Summary</b>:</p><p>${all}</p></body></html>"
   }
 
   if (rss != null) {
