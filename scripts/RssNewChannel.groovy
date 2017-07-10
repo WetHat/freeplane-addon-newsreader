@@ -1,4 +1,4 @@
-// @ExecutionModes({ON_SINGLE_NODE="//node_popup/RSS['NewChannel']"})
+// @ExecutionModes({ON_SINGLE_NODE="/node_popup/RSS['NewChannel']"})
 
 def contextNode
 def timer = 0
@@ -6,7 +6,7 @@ switch (node['Node Type'] ) {
   case   'RSSchannelGroup':
      contextNode = node
      break
-  case ['RSSchannel'  'RSSitem']: // cannot nest channels
+  case ['RSSchannel',  'RSSitem']: // cannot nest channels
     contextNode = null
     break
   default:
@@ -21,7 +21,7 @@ if (contextNode != null) {
   
   def attrs = childNode.attributes
   attrs.add('Node Type','RSSchannel')
-  attrs.add('New Items','=children.sum(0){it.[\'New\']==\'yes\' ? 1 : 0 }')
+  attrs.add('New Items','=children.sum(0){it[\'New\']==\'yes\' ? 1 : 0 }')
   attrs.add('Item Limit',10)
   attrs.add('Updated','Never')
   

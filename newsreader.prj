@@ -12,3 +12,8 @@ FilterW=*.*
 Create Tagfile=0
 [FilesW]
 0=README.md
+1=index.md
+2=version.properties
+3=License.md
+4=.\scripts\
+5=.gitignore

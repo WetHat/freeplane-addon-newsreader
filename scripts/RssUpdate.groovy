@@ -1,14 +1,11 @@
-// @ExecutionModes({ON_SELECTED_NODE_RECURSIVELY="//node_popup/RSS[UpdateNewsfeed]"})
+// @ExecutionModes({ON_SELECTED_NODE_RECURSIVELY="/node_popup/RSS[UpdateNewsfeed]"})
+
 
 /**
- */
-
-import javax.xml.transform.*;
-import javax.xml.transform.stream.*;
-import org.xml.sax.*;
-import java.io.IOException;
-import java.util.*
-
+ * Get the hyperlink described by a XML element.
+ *
+ * Attempts to extract the url fro the href attribute. If that is not available uses the element text content.  
+*/
 def getLinkURL(link) {
   def href = link.@href
   def retval = href == null || href.isEmpty() ? link.toString() :  href.text()
@@ -25,9 +22,9 @@ if (   node['Node Type'] == 'RSSchannel'
 
   try {
      // Download the groovy way
-     def feedXml = node.link.text.toURL().getText( [
-                                                                                                requestProperties: ['User-Agent': 'Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1)']
-                                                                                              ],'utf-8')
+     def feedXml = node.link.text.toURL().getText([
+                                                    requestProperties: ['User-Agent': 'Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1)']
+                                                  ],'utf-8')
      logger.info(feedXml)
      
      def slurper = new XmlSlurper()

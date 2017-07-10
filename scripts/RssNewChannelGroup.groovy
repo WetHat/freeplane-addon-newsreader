@@ -1,4 +1,4 @@
-// @ExecutionModes({ON_SINGLE_NODE="//node_popup/RSS['NewChannelGroup']"})
+// @ExecutionModes({ON_SINGLE_NODE="/node_popup/RSS['NewChannelGroup']"})
 
 def nodetype = node['Node Type']
 
