@@ -3,6 +3,8 @@
 This addon for the open source mind mapping and knowledge management tool [Freeplane](https://www.freeplane.org/wiki/index.php/Main_Page)
 manages RSS news channels and news items as nodes in a mind map.
 
+Download latest version:[WetHatNewsreader-0.1.0.addon.mm](https://raw.githubusercontent.com/WetHat/freeplane-addon-newsreader/blob/release/WetHatNewsreader-0.1.0.addon.mm)
+
 The addon provides basic news reading and management functionality such as:
 
 * Subscribing to news channels
