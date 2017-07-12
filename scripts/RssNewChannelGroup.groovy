@@ -1,7 +1,8 @@
 // @ExecutionModes({ON_SINGLE_NODE="/node_popup/RSS['NewChannelGroup']"})
 
-def nodetype = node['Node Type']
+def nodetype = node['Node Type'] // type of current node
 
+// We cannnot create a group below channels or items
 if (nodetype != 'RSSchannel' && nodetype != 'RSSitem') {
   def childNode = node.createChild()
   childNode.text = 'New Channel Group'
@@ -9,6 +10,7 @@ if (nodetype != 'RSSchannel' && nodetype != 'RSSitem') {
   
   def attrs = childNode.attributes
   attrs.add('Node Type','RSSchannelGroup')
+  // set the 'New Items' counter
   attrs.add('New Items','=children.sum(0){it[\'New Items\'].num0}')
   
    try {
