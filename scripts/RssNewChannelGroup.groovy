@@ -5,7 +5,7 @@ def nodetype = node['Node Type']
 if (nodetype != 'RSSchannel' && nodetype != 'RSSitem') {
   def childNode = node.createChild()
   childNode.text = 'New Channel Group'
-  childNode.link.text='menuitem:_RssUpdate_on_selected_node_recursively'
+  childNode.link.text='menuitem:_addon.whNewsreader.RssUpdate_on_selected_node_recursively'
   
   def attrs = childNode.attributes
   attrs.add('Node Type','RSSchannelGroup')
