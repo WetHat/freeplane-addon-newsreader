@@ -1,6 +1,6 @@
 <map version="freeplane 1.6.0">
 <!--To view this file, download free mind mapping software Freeplane from http://freeplane.sourceforge.net -->
-<node TEXT="whNewsreader" FOLDED="false" ID="ID_518515863" CREATED="1498925178169" MODIFIED="1499707915788" LINK="https://github.com/WetHat/freeplane-addon-newsreader" BACKGROUND_COLOR="#97c7dc" STYLE="combined" UNIFORM_SHAPE="true" MAX_WIDTH="360.0 pt" MIN_WIDTH="20.0 pt">
+<node TEXT="whNewsreader" FOLDED="false" ID="ID_518515863" CREATED="1498925178169" MODIFIED="1499851242448" LINK="https://github.com/WetHat/freeplane-addon-newsreader/wiki" BACKGROUND_COLOR="#97c7dc" STYLE="combined" UNIFORM_SHAPE="true" MAX_WIDTH="360.0 pt" MIN_WIDTH="20.0 pt">
 <font SIZE="16" BOLD="true" ITALIC="true"/>
 <hook NAME="MapStyle">
     <properties show_icon_for_attributes="true" fit_to_viewport="false;" show_note_icons="true" edgeColorConfiguration="#808080ff,#000000ff,#ff0033ff,#009933ff,#3333ffff,#ff6600ff,#cc00ccff,#ffbf00ff,#00ff99ff,#0099ffff,#996600ff,#000000ff,#cc0066ff,#33ff00ff,#ff9999ff,#0000ccff,#cccc00ff,#0099ccff,#006600ff,#ff00ccff,#00cc00ff,#0066ccff,#00ffffff"/>
@@ -156,7 +156,7 @@
   </body>
 </html>
 </richcontent>
-<node TEXT="description" POSITION="left" ID="ID_572094998" CREATED="1498925202742" MODIFIED="1499701646374"><richcontent TYPE="NOTE">
+<node TEXT="description" POSITION="left" ID="ID_572094998" CREATED="1498925202742" MODIFIED="1499846711238"><richcontent TYPE="NOTE">
 
 <html>
   <head>
@@ -175,7 +175,7 @@
   </body>
 </html>
 </richcontent>
-<node ID="ID_1922801011" CREATED="1499678504940" MODIFIED="1499688318066" MAX_WIDTH="240.0 pt"><richcontent TYPE="NODE">
+<node ID="ID_1922801011" CREATED="1499678504940" MODIFIED="1499846576327" MAX_WIDTH="240.0 pt"><richcontent TYPE="NODE">
 
 <html>
   <head>
@@ -224,9 +224,10 @@
 </html>
 </richcontent>
 <font BOLD="false"/>
+<node TEXT="" ID="ID_1080168657" CREATED="1499850237984" MODIFIED="1499850237984"/>
 </node>
 </node>
-<node TEXT="changes" POSITION="left" ID="ID_1937288719" CREATED="1498925202742" MODIFIED="1499701646374"><richcontent TYPE="NOTE">
+<node TEXT="changes" POSITION="left" ID="ID_1937288719" CREATED="1498925202742" MODIFIED="1499846711238"><richcontent TYPE="NOTE">
 
 <html>
   <head>
@@ -301,7 +302,7 @@
 </richcontent>
 </node>
 </node>
-<node TEXT="license" POSITION="left" ID="ID_1849949559" CREATED="1498925202742" MODIFIED="1499701646374"><richcontent TYPE="NOTE">
+<node TEXT="license" POSITION="left" ID="ID_1849949559" CREATED="1498925202742" MODIFIED="1499846711238"><richcontent TYPE="NOTE">
 
 <html>
   <head>
@@ -357,7 +358,7 @@
 <font BOLD="false"/>
 </node>
 </node>
-<node TEXT="preferences.xml" POSITION="left" ID="ID_950925147" CREATED="1498925202758" MODIFIED="1499701646389"><richcontent TYPE="NOTE">
+<node TEXT="preferences.xml" POSITION="left" ID="ID_950925147" CREATED="1498925202758" MODIFIED="1499846711238"><richcontent TYPE="NOTE">
 
 <html>
   <head>
@@ -374,7 +375,7 @@
 </html>
 </richcontent>
 </node>
-<node TEXT="default.properties" POSITION="left" ID="ID_924550804" CREATED="1498925202778" MODIFIED="1499701646389"><richcontent TYPE="NOTE">
+<node TEXT="default.properties" POSITION="left" ID="ID_924550804" CREATED="1498925202778" MODIFIED="1499846711238"><richcontent TYPE="NOTE">
 
 <html>
   <head>
@@ -388,7 +389,7 @@
 </html>
 </richcontent>
 </node>
-<node TEXT="translations" POSITION="left" ID="ID_1784907094" CREATED="1498925202780" MODIFIED="1499701646389"><richcontent TYPE="NOTE">
+<node TEXT="translations" POSITION="left" ID="ID_1784907094" CREATED="1498925202780" MODIFIED="1499846711238"><richcontent TYPE="NOTE">
 
 <html>
   <head>
@@ -422,7 +423,7 @@
 <attribute NAME="addons.RSS" VALUE="RSS News"/>
 </node>
 </node>
-<node TEXT="deinstall" POSITION="left" ID="ID_546131246" CREATED="1498925202827" MODIFIED="1499701646389" MAX_WIDTH="240.0 pt"><richcontent TYPE="NOTE">
+<node TEXT="deinstall" POSITION="left" ID="ID_546131246" CREATED="1498925202827" MODIFIED="1499846711238" MAX_WIDTH="360.0 pt"><richcontent TYPE="NOTE">
 
 <html>
   <head>
@@ -445,7 +446,7 @@
 <attribute NAME="delete" VALUE="${installationbase}/resources/images/whNewsreader-screenshot-1.png"/>
 <attribute NAME="delete" VALUE="${installationbase}/resources/images/whNewsreader.png"/>
 </node>
-<node TEXT="scripts" POSITION="right" ID="ID_487239182" CREATED="1498925202843" MODIFIED="1499701646405"><richcontent TYPE="NOTE">
+<node TEXT="scripts" POSITION="right" ID="ID_487239182" CREATED="1498925202843" MODIFIED="1499846711253"><richcontent TYPE="NOTE">
 
 <html>
   <head>
@@ -615,7 +616,7 @@
 <attribute NAME="execute_scripts_without_network_restriction" VALUE="true"/>
 </node>
 </node>
-<node TEXT="lib" POSITION="right" ID="ID_1600315449" CREATED="1498925202858" MODIFIED="1499701646452"><richcontent TYPE="NOTE">
+<node TEXT="lib" POSITION="right" ID="ID_1600315449" CREATED="1498925202858" MODIFIED="1499846711269"><richcontent TYPE="NOTE">
 
 <html>
   <head>
@@ -653,7 +654,7 @@
 </html>
 </richcontent>
 </node>
-<node TEXT="zips" POSITION="right" ID="ID_1885171384" CREATED="1498925202858" MODIFIED="1499701646471" MAX_WIDTH="240.0 pt"><richcontent TYPE="NOTE">
+<node TEXT="zips" POSITION="right" ID="ID_1885171384" CREATED="1498925202858" MODIFIED="1499846711284" MAX_WIDTH="240.0 pt"><richcontent TYPE="NOTE">
 
 <html>
   <head>
@@ -691,7 +692,7 @@
 </html>
 </richcontent>
 </node>
-<node TEXT="images" POSITION="right" ID="ID_1329813446" CREATED="1498925202878" MODIFIED="1499701646474"><richcontent TYPE="NOTE">
+<node TEXT="images" POSITION="right" ID="ID_1329813446" CREATED="1498925202878" MODIFIED="1499846711284"><richcontent TYPE="NOTE">
 
 <html>
   <head>
@@ -727,6 +728,71 @@
 <node TEXT="${name}.png" ID="ID_1590182270" CREATED="1499678237991" MODIFIED="1499685698464"/>
 <node TEXT="${name}-icon.png" ID="ID_687879010" CREATED="1499678237991" MODIFIED="1499678245095"/>
 <node TEXT="${name}-screenshot-1.png" ID="ID_952862904" CREATED="1499678249936" MODIFIED="1499678262957"/>
+</node>
+<node POSITION="right" ID="ID_1638992352" CREATED="1499850252391" MODIFIED="1499859764202" HGAP_QUANTITY="-237.06087164722004 pt" VSHIFT_QUANTITY="-49.46086997538748 pt" MAX_WIDTH="240.0 pt">
+<icon BUILTIN="messagebox_warning"/>
+<richcontent TYPE="NODE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      <font size="2">Important versioning and build informatio</font>n
+    </p>
+  </body>
+</html>
+
+</richcontent>
+<richcontent TYPE="DETAILS">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p style="text-align: left">
+      The version.properties file has to maintained manually because the packaging tool generates the wrong <b>downloadUrl. </b>
+    </p>
+    <p style="text-align: left">
+      
+    </p>
+    <p style="text-align: left">
+      <b><font color="#ff0000">Revert the changes to version.properties after every packaging!</font></b>&#160;
+    </p>
+    <p style="text-align: left">
+      
+    </p>
+    <p style="text-align: left">
+      To publish a new version of the addon following steps are required:
+    </p>
+    <ul>
+      <li style="text-align: left">
+        update the <i>version&#160;</i>property on the root node
+      </li>
+      <li style="text-align: left">
+        update version.properties
+      </li>
+      <li style="text-align: left">
+        commit and push to master
+      </li>
+      <li style="text-align: left">
+        merge master -&gt; release
+      </li>
+      <li style="text-align: left">
+        run <i>package</i>&#160;(<font color="#ff0000">revert changes&#160;to version.properties</font>)
+      </li>
+      <li style="text-align: left">
+        create a <a href="https://github.com/WetHat/freeplane-addon-newsreader/releases">new release on</a>&#160;github
+      </li>
+      <li style="text-align: left">
+        Update the download link in the <a href="https://github.com/WetHat/freeplane-addon-newsreader/wiki">wiki landing page</a>
+      </li>
+    </ul>
+  </body>
+</html>
+</richcontent>
 </node>
 </node>
 </map>
