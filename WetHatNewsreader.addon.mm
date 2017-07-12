@@ -1,9 +1,9 @@
 <map version="freeplane 1.6.0">
 <!--To view this file, download free mind mapping software Freeplane from http://freeplane.sourceforge.net -->
-<node TEXT="whNewsreader" FOLDED="false" ID="ID_518515863" CREATED="1498925178169" MODIFIED="1499851242448" LINK="https://github.com/WetHat/freeplane-addon-newsreader/wiki" BACKGROUND_COLOR="#97c7dc" STYLE="combined" UNIFORM_SHAPE="true" MAX_WIDTH="360.0 pt" MIN_WIDTH="20.0 pt">
+<node TEXT="whNewsreader" FOLDED="false" ID="ID_518515863" CREATED="1498925178169" MODIFIED="1499880767337" LINK="https://github.com/WetHat/freeplane-addon-newsreader/wiki" BACKGROUND_COLOR="#97c7dc" STYLE="combined" UNIFORM_SHAPE="true" MAX_WIDTH="360.0 pt" MIN_WIDTH="20.0 pt">
 <font SIZE="16" BOLD="true" ITALIC="true"/>
 <hook NAME="MapStyle">
-    <properties show_icon_for_attributes="true" fit_to_viewport="false;" show_note_icons="true" edgeColorConfiguration="#808080ff,#000000ff,#ff0033ff,#009933ff,#3333ffff,#ff6600ff,#cc00ccff,#ffbf00ff,#00ff99ff,#0099ffff,#996600ff,#000000ff,#cc0066ff,#33ff00ff,#ff9999ff,#0000ccff,#cccc00ff,#0099ccff,#006600ff,#ff00ccff,#00cc00ff,#0066ccff,#00ffffff"/>
+    <properties fit_to_viewport="false;" show_icon_for_attributes="true" show_note_icons="true" edgeColorConfiguration="#808080ff,#000000ff,#ff0033ff,#009933ff,#3333ffff,#ff6600ff,#cc00ccff,#ffbf00ff,#00ff99ff,#0099ffff,#996600ff,#000000ff,#cc0066ff,#33ff00ff,#ff9999ff,#0000ccff,#cccc00ff,#0099ccff,#006600ff,#ff00ccff,#00cc00ff,#0066ccff,#00ffffff"/>
 
 <map_styles>
 <stylenode LOCALIZED_TEXT="styles.root_node" STYLE="oval" UNIFORM_SHAPE="true" VGAP_QUANTITY="24.0 pt" TEXT_SHORTENED="true">
@@ -155,8 +155,9 @@
     </ul>
   </body>
 </html>
+
 </richcontent>
-<node TEXT="description" POSITION="left" ID="ID_572094998" CREATED="1498925202742" MODIFIED="1499846711238"><richcontent TYPE="NOTE">
+<node TEXT="description" POSITION="left" ID="ID_572094998" CREATED="1498925202742" MODIFIED="1499880767364"><richcontent TYPE="NOTE">
 
 <html>
   <head>
@@ -174,6 +175,7 @@
     </p>
   </body>
 </html>
+
 </richcontent>
 <node ID="ID_1922801011" CREATED="1499678504940" MODIFIED="1499846576327" MAX_WIDTH="240.0 pt"><richcontent TYPE="NODE">
 
@@ -227,7 +229,7 @@
 <node TEXT="" ID="ID_1080168657" CREATED="1499850237984" MODIFIED="1499850237984"/>
 </node>
 </node>
-<node TEXT="changes" POSITION="left" ID="ID_1937288719" CREATED="1498925202742" MODIFIED="1499846711238"><richcontent TYPE="NOTE">
+<node TEXT="changes" POSITION="left" ID="ID_1937288719" CREATED="1498925202742" MODIFIED="1499880767366"><richcontent TYPE="NOTE">
 
 <html>
   <head>
@@ -239,6 +241,7 @@
     </p>
   </body>
 </html>
+
 </richcontent>
 <node TEXT="0.1.2" ID="ID_1551676569" CREATED="1499693389052" MODIFIED="1499705323065"><richcontent TYPE="NOTE">
 
@@ -302,7 +305,7 @@
 </richcontent>
 </node>
 </node>
-<node TEXT="license" POSITION="left" ID="ID_1849949559" CREATED="1498925202742" MODIFIED="1499846711238"><richcontent TYPE="NOTE">
+<node TEXT="license" POSITION="left" ID="ID_1849949559" CREATED="1498925202742" MODIFIED="1499880767368"><richcontent TYPE="NOTE">
 
 <html>
   <head>
@@ -320,6 +323,7 @@
     </p>
   </body>
 </html>
+
 </richcontent>
 <node ID="ID_138259878" CREATED="1498925202758" MODIFIED="1499699095283"><richcontent TYPE="NODE">
 
@@ -358,7 +362,7 @@
 <font BOLD="false"/>
 </node>
 </node>
-<node TEXT="preferences.xml" POSITION="left" ID="ID_950925147" CREATED="1498925202758" MODIFIED="1499846711238"><richcontent TYPE="NOTE">
+<node TEXT="preferences.xml" POSITION="left" ID="ID_950925147" CREATED="1498925202758" MODIFIED="1499880767371"><richcontent TYPE="NOTE">
 
 <html>
   <head>
@@ -373,9 +377,10 @@
     </p>
   </body>
 </html>
+
 </richcontent>
 </node>
-<node TEXT="default.properties" POSITION="left" ID="ID_924550804" CREATED="1498925202778" MODIFIED="1499846711238"><richcontent TYPE="NOTE">
+<node TEXT="default.properties" POSITION="left" ID="ID_924550804" CREATED="1498925202778" MODIFIED="1499880767373"><richcontent TYPE="NOTE">
 
 <html>
   <head>
@@ -387,9 +392,10 @@
     </p>
   </body>
 </html>
+
 </richcontent>
 </node>
-<node TEXT="translations" POSITION="left" ID="ID_1784907094" CREATED="1498925202780" MODIFIED="1499846711238"><richcontent TYPE="NOTE">
+<node TEXT="translations" POSITION="left" ID="ID_1784907094" CREATED="1498925202780" MODIFIED="1499880767376"><richcontent TYPE="NOTE">
 
 <html>
   <head>
@@ -412,18 +418,20 @@
     </ul>
   </body>
 </html>
+
 </richcontent>
-<node TEXT="en" ID="ID_926511279" CREATED="1498925202780" MODIFIED="1499696568783" MAX_WIDTH="240.0 pt">
+<node TEXT="en" ID="ID_926511279" CREATED="1498925202780" MODIFIED="1499880386465" MAX_WIDTH="360.0 pt">
 <attribute_layout NAME_WIDTH="159.65217523701025 pt" VALUE_WIDTH="159.65217523701025 pt"/>
 <attribute NAME="addons.${name}" VALUE="WetHat Newsreader"/>
 <attribute NAME="addon.${name}.RssUpdate" VALUE="Update Newsfeeds"/>
 <attribute NAME="addon.${name}.RssToggleRead" VALUE="Toggle Item Read/Unread"/>
 <attribute NAME="addon.${name}.RssNewChannelGroup" VALUE="New Channel Group"/>
 <attribute NAME="addon.${name}.RssNewChannel" VALUE="New Channel"/>
+<attribute NAME="addon.${name}.RssShowDocs" VALUE="Online Documentation"/>
 <attribute NAME="addons.RSS" VALUE="RSS News"/>
 </node>
 </node>
-<node TEXT="deinstall" POSITION="left" ID="ID_546131246" CREATED="1498925202827" MODIFIED="1499846711238" MAX_WIDTH="360.0 pt"><richcontent TYPE="NOTE">
+<node TEXT="deinstall" POSITION="left" ID="ID_546131246" CREATED="1498925202827" MODIFIED="1499880767377" MAX_WIDTH="360.0 pt"><richcontent TYPE="NOTE">
 
 <html>
   <head>
@@ -435,6 +443,7 @@
     </p>
   </body>
 </html>
+
 </richcontent>
 <attribute_layout NAME_WIDTH="31.304348085688282 pt" VALUE_WIDTH="296.76521985232495 pt"/>
 <attribute NAME="delete" VALUE="${installationbase}/addons/${name}.script.xml"/>
@@ -445,8 +454,9 @@
 <attribute NAME="delete" VALUE="${installationbase}/resources/images/whNewsreader-icon.png"/>
 <attribute NAME="delete" VALUE="${installationbase}/resources/images/whNewsreader-screenshot-1.png"/>
 <attribute NAME="delete" VALUE="${installationbase}/resources/images/whNewsreader.png"/>
+<attribute NAME="delete" VALUE="${installationbase}/addons/${name}/scripts/RssShowDocs.groovy"/>
 </node>
-<node TEXT="scripts" POSITION="right" ID="ID_487239182" CREATED="1498925202843" MODIFIED="1499846711253"><richcontent TYPE="NOTE">
+<node TEXT="scripts" POSITION="right" ID="ID_487239182" CREATED="1498925202843" MODIFIED="1499880767383"><richcontent TYPE="NOTE">
 
 <html>
   <head>
@@ -566,6 +576,7 @@
     </p>
   </body>
 </html>
+
 </richcontent>
 <node TEXT="RssNewChannel.groovy" ID="ID_678499988" CREATED="1499676857153" MODIFIED="1499701607113" MAX_WIDTH="360.0 pt">
 <attribute_layout NAME_WIDTH="180.3130449735645 pt" VALUE_WIDTH="180.3130449735645 pt"/>
@@ -615,8 +626,20 @@
 <attribute NAME="execute_scripts_without_exec_restriction" VALUE="false"/>
 <attribute NAME="execute_scripts_without_network_restriction" VALUE="true"/>
 </node>
+<node TEXT="RssShowDocs.groovy" ID="ID_737290079" CREATED="1499677050313" MODIFIED="1499880751033" MAX_WIDTH="360.0 pt">
+<attribute_layout NAME_WIDTH="180.3130449735645 pt" VALUE_WIDTH="180.3130449735645 pt"/>
+<attribute NAME="menuTitleKey" VALUE="addon.${name}.RssShowDocs"/>
+<attribute NAME="menuLocation" VALUE="main_menu_scripting/addons.RSS"/>
+<attribute NAME="executionMode" VALUE="on_single_node"/>
+<attribute NAME="keyboardShortcut" VALUE=""/>
+<attribute NAME="execute_scripts_without_asking" VALUE="true"/>
+<attribute NAME="execute_scripts_without_file_restriction" VALUE="true"/>
+<attribute NAME="execute_scripts_without_write_restriction" VALUE="true"/>
+<attribute NAME="execute_scripts_without_exec_restriction" VALUE="true"/>
+<attribute NAME="execute_scripts_without_network_restriction" VALUE="true"/>
 </node>
-<node TEXT="lib" POSITION="right" ID="ID_1600315449" CREATED="1498925202858" MODIFIED="1499846711269"><richcontent TYPE="NOTE">
+</node>
+<node TEXT="lib" POSITION="right" ID="ID_1600315449" CREATED="1498925202858" MODIFIED="1499880767442"><richcontent TYPE="NOTE">
 
 <html>
   <head>
@@ -652,9 +675,10 @@
     </p>
   </body>
 </html>
+
 </richcontent>
 </node>
-<node TEXT="zips" POSITION="right" ID="ID_1885171384" CREATED="1498925202858" MODIFIED="1499846711284" MAX_WIDTH="240.0 pt"><richcontent TYPE="NOTE">
+<node TEXT="zips" POSITION="right" ID="ID_1885171384" CREATED="1498925202858" MODIFIED="1499880767446" MAX_WIDTH="240.0 pt"><richcontent TYPE="NOTE">
 
 <html>
   <head>
@@ -690,9 +714,10 @@
     </p>
   </body>
 </html>
+
 </richcontent>
 </node>
-<node TEXT="images" POSITION="right" ID="ID_1329813446" CREATED="1498925202878" MODIFIED="1499846711284"><richcontent TYPE="NOTE">
+<node TEXT="images" POSITION="right" ID="ID_1329813446" CREATED="1498925202878" MODIFIED="1499880767450"><richcontent TYPE="NOTE">
 
 <html>
   <head>
@@ -724,6 +749,7 @@
     </p>
   </body>
 </html>
+
 </richcontent>
 <node TEXT="${name}.png" ID="ID_1590182270" CREATED="1499678237991" MODIFIED="1499685698464"/>
 <node TEXT="${name}-icon.png" ID="ID_687879010" CREATED="1499678237991" MODIFIED="1499678245095"/>
@@ -743,7 +769,6 @@
     </p>
   </body>
 </html>
-
 </richcontent>
 <richcontent TYPE="DETAILS">
 
