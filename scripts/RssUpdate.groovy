@@ -2,10 +2,15 @@
 
 import java.util.regex.*
 
+// Recursively update news channels below a selected ndoe
+
+/**
+ * Detect evil html which may crash freeplane
+ */
 SANITIZER = Pattern.compile('<script.*</script>',Pattern.CASE_INSENSITIVE|Pattern.DOTALL)
 
 /**
- * Get the hyperlink described by a XML element.
+ * Get the hyperlink described by an XML element.
  *
  * Attempts to extract the url for the href attribute. If that is not available uses the element text content.
  * @returns url string
@@ -28,10 +33,25 @@ String getSanitizedHTML(htmlFragment) {
   return '<html><body>' + sanitized + '</body></html>'
 }
 
+/**
+ * Store expection details in the node text and note.
+ *
+ * @param node The node object of the failing channel.
+ * @param exception the exception which occurend during channel update.
+ */
+void setNodeException(node,exception) {
+  logger.severe("Update of channel '${node.link.text}' failed!", exception)
+  node.text = "<html><body><p><font color=\"#ff0000\"><b>Could not update channel!</font></b></p></body></html>"
+  node.note = "<html><body><p><b>Channel url</b>: ${node.link.text}</p><p><b>Exception</b>:</p><p>${exception}</p></body></html>"
+}
+
+  ////////////////////////
+ //// Channel Update ////
+////////////////////////
+
 if (   node['Node Type'] == 'RSSchannel'
     && node.link.text != null
-    && node.link.text.startsWith('http')) {
-  // Execute the script only if the current node is a feed node (don't execute it for the feed items)
+    && node.link.text.startsWith('http')) { // looks like a valid channel
     
   // create the feed object model
   def rss = null
@@ -41,21 +61,17 @@ if (   node['Node Type'] == 'RSSchannel'
      feedXml = node.link.text.toURL().getText([
                                                 requestProperties: ['User-Agent': 'Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1)']
                                               ],'utf-8')
-     //logger.info(feedXml)
-     
      def slurper = new XmlSlurper()
      slurper.setFeature("http://apache.org/xml/features/disallow-doctype-decl", false) 
      slurper.setFeature("http://apache.org/xml/features/nonvalidating/load-external-dtd", false);
      rss = slurper.parseText(feedXml).declareNamespace(content:'http://purl.org/rss/1.0/modules/content/')       
   }
   catch (all) {
-    logger.severe("Unable to obtain feed XML object model from (${node.link.text}):",all)
+    setNodeException(node,all)
     if (feedXml != null) {
       logger.severe(feedXml)
     }
-    // add the exception summary to the node
-    node.text = "<html><body><p><font color=\"#ff0000\"><b>Could not load feed!</font></b></p></body></html>"
-    node.note = "<html><body><p><b>Feed url</b>: ${node.link.text}</p><p><b>Exception Summary</b>:</p><p>${all}</p></body></html>"
+  
   }
 
   if (rss != null) {
@@ -86,7 +102,7 @@ if (   node['Node Type'] == 'RSSchannel'
     
       def nodeCount = 0
       switch (rss.name()) {
-        case 'rss':
+        case 'rss': // RSS channels
           logger.info("Parsing as RSS feed: ${rss.channel.title}")
           node.text = rss.channel.title
           node.note = rss.channel.description
@@ -127,7 +143,7 @@ if (   node['Node Type'] == 'RSSchannel'
             nodeCount++
           } 
           break
-        case 'feed':
+        case 'feed': // ATOM feeds
           logger.info("Parsing as Atom feed: ${rss.title}")
           node.text = rss.title
           node.note = rss.subtitle
@@ -157,7 +173,8 @@ if (   node['Node Type'] == 'RSSchannel'
           }
           break
         default:
-          logger.severe("Unknown feed format: ${rss.name}")
+          logger.severe("Unknown channel format: ${rss.name}")
+          node.text = "<html><body><p><font color=\"#ff0000\"><b>Unsupported Channel format: ${rss.name()}</font></b></p></body></html>"
           break
       }
 
@@ -169,7 +186,8 @@ if (   node['Node Type'] == 'RSSchannel'
       }
     }
     catch (all) {
-       logger.severe('Parsing feed failed:',all)
+       setNodeException(node,all)
+       logger.severe(feedXml)
     }
   }
 }
