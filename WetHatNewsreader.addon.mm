@@ -3,7 +3,7 @@
 <node TEXT="whNewsreader" FOLDED="false" ID="ID_518515863" CREATED="1498925178169" MODIFIED="1499880767337" LINK="https://github.com/WetHat/freeplane-addon-newsreader/wiki" BACKGROUND_COLOR="#97c7dc" STYLE="combined" UNIFORM_SHAPE="true" MAX_WIDTH="360.0 pt" MIN_WIDTH="20.0 pt">
 <font SIZE="16" BOLD="true" ITALIC="true"/>
 <hook NAME="MapStyle">
-    <properties fit_to_viewport="false;" show_icon_for_attributes="true" show_note_icons="true" edgeColorConfiguration="#808080ff,#000000ff,#ff0033ff,#009933ff,#3333ffff,#ff6600ff,#cc00ccff,#ffbf00ff,#00ff99ff,#0099ffff,#996600ff,#000000ff,#cc0066ff,#33ff00ff,#ff9999ff,#0000ccff,#cccc00ff,#0099ccff,#006600ff,#ff00ccff,#00cc00ff,#0066ccff,#00ffffff"/>
+    <properties show_icon_for_attributes="true" fit_to_viewport="false;" show_note_icons="true" edgeColorConfiguration="#808080ff,#000000ff,#ff0033ff,#009933ff,#3333ffff,#ff6600ff,#cc00ccff,#ffbf00ff,#00ff99ff,#0099ffff,#996600ff,#000000ff,#cc0066ff,#33ff00ff,#ff9999ff,#0000ccff,#cccc00ff,#0099ccff,#006600ff,#ff00ccff,#00cc00ff,#0066ccff,#00ffffff"/>
 
 <map_styles>
 <stylenode LOCALIZED_TEXT="styles.root_node" STYLE="oval" UNIFORM_SHAPE="true" VGAP_QUANTITY="24.0 pt" TEXT_SHORTENED="true">
@@ -155,7 +155,6 @@
     </ul>
   </body>
 </html>
-
 </richcontent>
 <node TEXT="description" POSITION="left" ID="ID_572094998" CREATED="1498925202742" MODIFIED="1499880767364"><richcontent TYPE="NOTE">
 
@@ -175,7 +174,6 @@
     </p>
   </body>
 </html>
-
 </richcontent>
 <node ID="ID_1922801011" CREATED="1499678504940" MODIFIED="1499846576327" MAX_WIDTH="240.0 pt"><richcontent TYPE="NODE">
 
@@ -226,7 +224,6 @@
 </html>
 </richcontent>
 <font BOLD="false"/>
-<node TEXT="" ID="ID_1080168657" CREATED="1499850237984" MODIFIED="1499850237984"/>
 </node>
 </node>
 <node TEXT="changes" POSITION="left" ID="ID_1937288719" CREATED="1498925202742" MODIFIED="1499880767366"><richcontent TYPE="NOTE">
@@ -241,8 +238,27 @@
     </p>
   </body>
 </html>
+</richcontent>
+<node TEXT="0.2.0" ID="ID_327385482" CREATED="1499693389052" MODIFIED="1499881715455"><richcontent TYPE="NOTE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <ul>
+      <li>
+        HTML fragement sanitazion added to avoid problems with Freeplane if the item description contains evil stuff
+      </li>
+      <li>
+        Action added top open online documentation in the browser
+      </li>
+    </ul>
+  </body>
+</html>
 
 </richcontent>
+</node>
 <node TEXT="0.1.2" ID="ID_1551676569" CREATED="1499693389052" MODIFIED="1499705323065"><richcontent TYPE="NOTE">
 
 <html>
@@ -323,7 +339,6 @@
     </p>
   </body>
 </html>
-
 </richcontent>
 <node ID="ID_138259878" CREATED="1498925202758" MODIFIED="1499699095283"><richcontent TYPE="NODE">
 
@@ -377,7 +392,6 @@
     </p>
   </body>
 </html>
-
 </richcontent>
 </node>
 <node TEXT="default.properties" POSITION="left" ID="ID_924550804" CREATED="1498925202778" MODIFIED="1499880767373"><richcontent TYPE="NOTE">
@@ -392,7 +406,6 @@
     </p>
   </body>
 </html>
-
 </richcontent>
 </node>
 <node TEXT="translations" POSITION="left" ID="ID_1784907094" CREATED="1498925202780" MODIFIED="1499880767376"><richcontent TYPE="NOTE">
@@ -418,7 +431,6 @@
     </ul>
   </body>
 </html>
-
 </richcontent>
 <node TEXT="en" ID="ID_926511279" CREATED="1498925202780" MODIFIED="1499880386465" MAX_WIDTH="360.0 pt">
 <attribute_layout NAME_WIDTH="159.65217523701025 pt" VALUE_WIDTH="159.65217523701025 pt"/>
@@ -443,7 +455,6 @@
     </p>
   </body>
 </html>
-
 </richcontent>
 <attribute_layout NAME_WIDTH="31.304348085688282 pt" VALUE_WIDTH="296.76521985232495 pt"/>
 <attribute NAME="delete" VALUE="${installationbase}/addons/${name}.script.xml"/>
@@ -576,7 +587,6 @@
     </p>
   </body>
 </html>
-
 </richcontent>
 <node TEXT="RssNewChannel.groovy" ID="ID_678499988" CREATED="1499676857153" MODIFIED="1499701607113" MAX_WIDTH="360.0 pt">
 <attribute_layout NAME_WIDTH="180.3130449735645 pt" VALUE_WIDTH="180.3130449735645 pt"/>
@@ -675,7 +685,6 @@
     </p>
   </body>
 </html>
-
 </richcontent>
 </node>
 <node TEXT="zips" POSITION="right" ID="ID_1885171384" CREATED="1498925202858" MODIFIED="1499880767446" MAX_WIDTH="240.0 pt"><richcontent TYPE="NOTE">
@@ -714,7 +723,6 @@
     </p>
   </body>
 </html>
-
 </richcontent>
 </node>
 <node TEXT="images" POSITION="right" ID="ID_1329813446" CREATED="1498925202878" MODIFIED="1499880767450"><richcontent TYPE="NOTE">
@@ -749,7 +757,6 @@
     </p>
   </body>
 </html>
-
 </richcontent>
 <node TEXT="${name}.png" ID="ID_1590182270" CREATED="1499678237991" MODIFIED="1499685698464"/>
 <node TEXT="${name}-icon.png" ID="ID_687879010" CREATED="1499678237991" MODIFIED="1499678245095"/>
