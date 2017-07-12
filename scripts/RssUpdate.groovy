@@ -1,15 +1,31 @@
 // @ExecutionModes({ON_SELECTED_NODE_RECURSIVELY="/node_popup/RSS[UpdateNewsfeed]"})
 
+import java.util.regex.*
+
+SANITIZER = Pattern.compile('<script.*</script>',Pattern.CASE_INSENSITIVE|Pattern.DOTALL)
 
 /**
  * Get the hyperlink described by a XML element.
  *
- * Attempts to extract the url fro the href attribute. If that is not available uses the element text content.  
+ * Attempts to extract the url for the href attribute. If that is not available uses the element text content.
+ * @returns url string
 */
-def getLinkURL(link) {
+String getLinkURL(link) {
   def href = link.@href
   def retval = href == null || href.isEmpty() ? link.toString() :  href.text()
   return retval
+}
+
+/**
+ * Remove evil stuff from html fragments to be used in notes.
+ *
+ * @param htmlFragment html to be used in item descriptions (note text)
+ * @returns sanitized html document ready for use as note text
+ */
+String getSanitizedHTML(htmlFragment) {
+  // remove garbage
+  def sanitized = SANITIZER.matcher(htmlFragment.text()).replaceAll('')
+  return '<html><body>' + sanitized + '</body></html>'
 }
 
 if (   node['Node Type'] == 'RSSchannel'
@@ -92,7 +108,7 @@ if (   node['Node Type'] == 'RSSchannel'
               if (content.isEmpty()) {
                 content = it.description
               }
-              childNode.note = '<html><body>' + content + '</body></html>'
+              childNode.note = getSanitizedHTML(content)
               
               childNode.link.text = url
               
@@ -127,7 +143,7 @@ if (   node['Node Type'] == 'RSSchannel'
               def childNode = node.createChild(nodeCount)
 
               childNode.text = title
-              childNode.note = '<html><body>' + it.content + '</body></html>'
+              childNode.note = getSanitizedHTML(it.content)
               childNode.link.text = url
               
               def attrs = childNode.attributes
