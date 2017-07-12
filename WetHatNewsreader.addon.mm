@@ -239,7 +239,7 @@
   </body>
 </html>
 </richcontent>
-<node TEXT="0.2.0" ID="ID_327385482" CREATED="1499693389052" MODIFIED="1499881715455"><richcontent TYPE="NOTE">
+<node TEXT="0.2.0" ID="ID_327385482" CREATED="1499693389052" MODIFIED="1499888959190"><richcontent TYPE="NOTE">
 
 <html>
   <head>
@@ -251,7 +251,13 @@
         HTML fragement sanitazion added to avoid problems with Freeplane if the item description contains evil stuff
       </li>
       <li>
-        Action added top open online documentation in the browser
+        Update action on channel group nodes fixed
+      </li>
+      <li>
+        Action added top open online documentation in the browser.
+      </li>
+      <li>
+        Improved error handling
       </li>
     </ul>
   </body>
