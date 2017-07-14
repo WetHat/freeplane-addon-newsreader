@@ -3,7 +3,7 @@
 <node TEXT="whNewsreader" FOLDED="false" ID="ID_518515863" CREATED="1498925178169" MODIFIED="1499880767337" LINK="https://github.com/WetHat/freeplane-addon-newsreader/wiki" BACKGROUND_COLOR="#97c7dc" STYLE="combined" UNIFORM_SHAPE="true" MAX_WIDTH="360.0 pt" MIN_WIDTH="20.0 pt">
 <font SIZE="16" BOLD="true" ITALIC="true"/>
 <hook NAME="MapStyle">
-    <properties show_icon_for_attributes="true" fit_to_viewport="false;" show_note_icons="true" edgeColorConfiguration="#808080ff,#000000ff,#ff0033ff,#009933ff,#3333ffff,#ff6600ff,#cc00ccff,#ffbf00ff,#00ff99ff,#0099ffff,#996600ff,#000000ff,#cc0066ff,#33ff00ff,#ff9999ff,#0000ccff,#cccc00ff,#0099ccff,#006600ff,#ff00ccff,#00cc00ff,#0066ccff,#00ffffff"/>
+    <properties fit_to_viewport="false;" show_icon_for_attributes="true" show_note_icons="true" edgeColorConfiguration="#808080ff,#000000ff,#ff0033ff,#009933ff,#3333ffff,#ff6600ff,#cc00ccff,#ffbf00ff,#00ff99ff,#0099ffff,#996600ff,#000000ff,#cc0066ff,#33ff00ff,#ff9999ff,#0000ccff,#cccc00ff,#0099ccff,#006600ff,#ff00ccff,#00cc00ff,#0066ccff,#00ffffff"/>
 
 <map_styles>
 <stylenode LOCALIZED_TEXT="styles.root_node" STYLE="oval" UNIFORM_SHAPE="true" VGAP_QUANTITY="24.0 pt" TEXT_SHORTENED="true">
@@ -239,7 +239,7 @@
   </body>
 </html>
 </richcontent>
-<node TEXT="0.2.0" ID="ID_327385482" CREATED="1499693389052" MODIFIED="1499888959190"><richcontent TYPE="NOTE">
+<node TEXT="0.2.0" ID="ID_327385482" CREATED="1499693389052" MODIFIED="1500045048480"><richcontent TYPE="NOTE">
 
 <html>
   <head>
@@ -248,7 +248,7 @@
   <body>
     <ul>
       <li>
-        HTML fragement sanitazion added to avoid problems with Freeplane if the item description contains evil stuff
+        HTML fragment sanitization added to avoid problems with Freeplane if the item description contains evil stuff
       </li>
       <li>
         Update action on channel group nodes fixed
@@ -258,6 +258,9 @@
       </li>
       <li>
         Improved error handling
+      </li>
+      <li>
+        Bugfixes
       </li>
     </ul>
   </body>
