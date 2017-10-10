@@ -1,9 +1,9 @@
 <map version="freeplane 1.6.0">
 <!--To view this file, download free mind mapping software Freeplane from http://freeplane.sourceforge.net -->
-<node TEXT="whNewsreader" ID="ID_518515863" CREATED="1498925178169" MODIFIED="1507635388500" LINK="https://github.com/WetHat/freeplane-addon-newsreader/wiki" BACKGROUND_COLOR="#97c7dc" STYLE="combined" UNIFORM_SHAPE="true" MAX_WIDTH="360.0 pt" MIN_WIDTH="20.0 pt">
+<node TEXT="whNewsreader" ID="ID_518515863" CREATED="1498925178169" MODIFIED="1507638498591" LINK="https://github.com/WetHat/freeplane-addon-newsreader/wiki" BACKGROUND_COLOR="#97c7dc" STYLE="combined" UNIFORM_SHAPE="true" MAX_WIDTH="360.0 pt" MIN_WIDTH="20.0 pt">
 <font SIZE="16" BOLD="true" ITALIC="true"/>
 <hook NAME="MapStyle">
-    <properties show_icon_for_attributes="true" fit_to_viewport="false;" show_note_icons="true" edgeColorConfiguration="#808080ff,#000000ff,#ff0033ff,#009933ff,#3333ffff,#ff6600ff,#cc00ccff,#ffbf00ff,#00ff99ff,#0099ffff,#996600ff,#000000ff,#cc0066ff,#33ff00ff,#ff9999ff,#0000ccff,#cccc00ff,#0099ccff,#006600ff,#ff00ccff,#00cc00ff,#0066ccff,#00ffffff"/>
+    <properties fit_to_viewport="false;" show_icon_for_attributes="true" show_note_icons="true" edgeColorConfiguration="#808080ff,#000000ff,#ff0033ff,#009933ff,#3333ffff,#ff6600ff,#cc00ccff,#ffbf00ff,#00ff99ff,#0099ffff,#996600ff,#000000ff,#cc0066ff,#33ff00ff,#ff9999ff,#0000ccff,#cccc00ff,#0099ccff,#006600ff,#ff00ccff,#00cc00ff,#0066ccff,#00ffffff"/>
 
 <map_styles>
 <stylenode LOCALIZED_TEXT="styles.root_node" STYLE="oval" UNIFORM_SHAPE="true" VGAP_QUANTITY="24.0 pt" TEXT_SHORTENED="true">
@@ -251,7 +251,6 @@
     </p>
   </body>
 </html>
-
 </richcontent>
 </node>
 <node TEXT="0.2.0" ID="ID_327385482" CREATED="1499693389052" MODIFIED="1500045048480"><richcontent TYPE="NOTE">
@@ -785,7 +784,7 @@
 <node TEXT="${name}-icon.png" ID="ID_687879010" CREATED="1499678237991" MODIFIED="1499678245095"/>
 <node TEXT="${name}-screenshot-1.png" ID="ID_952862904" CREATED="1499678249936" MODIFIED="1499678262957"/>
 </node>
-<node POSITION="right" ID="ID_1638992352" CREATED="1499850252391" MODIFIED="1499859764202" HGAP_QUANTITY="-237.06087164722004 pt" VSHIFT_QUANTITY="-49.46086997538748 pt" MAX_WIDTH="240.0 pt">
+<node POSITION="right" ID="ID_1638992352" CREATED="1499850252391" MODIFIED="1507638691414" HGAP_QUANTITY="-314.59933204804406 pt" VSHIFT_QUANTITY="199.2160494529696 pt" MAX_WIDTH="240.0 pt">
 <icon BUILTIN="messagebox_warning"/>
 <richcontent TYPE="NODE">
 
@@ -824,10 +823,10 @@
     </p>
     <ul>
       <li style="text-align: left">
-        update the <i>version&#160;</i>property on the root node
+        update the <i>version&#160;attribute</i>&#160;on the root node
       </li>
       <li style="text-align: left">
-        update version.properties
+        update the version.properties file
       </li>
       <li style="text-align: left">
         commit and push to master
@@ -836,10 +835,13 @@
         merge master -&gt; release
       </li>
       <li style="text-align: left">
-        run <i>package</i>&#160;(<font color="#ff0000">revert changes&#160;to version.properties</font>)
+        run Tools-&gt;Devtools-&gt;P<i>ackage add-on for publication </i>
       </li>
       <li style="text-align: left">
-        create a <a href="https://github.com/WetHat/freeplane-addon-newsreader/releases">new release on</a>&#160;github
+        <font color="#ff0000">Revert changes&#160;to version.properties</font>
+      </li>
+      <li style="text-align: left">
+        create a <a href="https://github.com/WetHat/freeplane-addon-newsreader/releases">new release on</a>&#160;github (Let github create the release tag)
       </li>
       <li style="text-align: left">
         Update the download link in the <a href="https://github.com/WetHat/freeplane-addon-newsreader/wiki">wiki landing page</a>
@@ -847,6 +849,7 @@
     </ul>
   </body>
 </html>
+
 </richcontent>
 </node>
 </node>
