@@ -159,7 +159,13 @@ if (   node['Node Type'] == 'RSSchannel'
               def childNode = node.createChild(nodeCount)
 
               childNode.text = title
-              childNode.note = getSanitizedHTML(it.content)
+            
+              def content = it.content
+              if (content.isEmpty()) {
+                content = it.summary
+              }
+            
+              childNode.note = getSanitizedHTML(content)
               childNode.link.text = url
               
               def attrs = childNode.attributes
