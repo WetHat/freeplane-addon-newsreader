@@ -45,6 +45,69 @@ void setNodeException(node,exception) {
   node.note = "<html><body><p><b>Channel url</b>: ${node.link.text}</p><p><b>Exception</b>:</p><p>${exception}</p></body></html>"
 }
 
+/** Open a connection to a RSS feed
+  *
+  * @param feed URL
+  * @returns open connection
+  */
+HttpURLConnection connectToRSSFeed(URL url) {
+     HttpURLConnection conn = url.openConnection()
+      conn.followRedirects = false
+      conn.requestMethod = 'GET'
+      conn.addRequestProperty('User-Agent','Mozilla/5.0 (Windows NT 6.1; WOW64; rv:25.0) Gecko/20100101 Firefox/25.0')
+      conn.addRequestProperty('Accept','text/xml,application/xml')
+      conn.addRequestProperty('Accept-Charset','utf-8')
+      conn.addRequestProperty('Connection','keep-alive')
+      conn
+} 
+/**
+ * Download feed content following redirects and applying cookies if needed
+*/
+String downloadFeedContent(URL url) {
+  HttpURLConnection conn = connectToRSSFeed(url)
+ 
+  logger.info("Request Properties: ${conn.getRequestProperties()}")
+  int retries = 10
+  while (conn.responseCode in [301,302,307] && --retries > 0) {
+    logger.info("${url} -> ${conn.responseCode}")
+    if (conn.headerFields.'Location') {
+      url = conn.headerFields.Location.first().toURL()
+      
+      String cookie = null
+      if (conn.headerFields.'Set-Cookie') {
+	      cookie = conn.headerFields.'Set-Cookie'.first().toString()
+	      cookie = cookie.substring(0, cookie.indexOf(';'))
+	      logger.info("Detected Cookie: ${cookie} for ${url}")
+	    }
+      
+      // close the connection and open a new one
+      conn.disconnect()
+      conn=connectToRSSFeed(url)
+      if (cookie) {
+          conn.addRequestProperty('Cookie',cookie)
+          logger.info("Request Properties: ${conn.getRequestProperties()}")
+      }
+    } else {
+        throw new RuntimeException("Failed to follow redirect for ${url}")
+    }
+  }
+  
+  if (conn.responseCode != 200) {
+    throw new RuntimeException("Failed to get feed content ${url} - Response Code: ${conn.responseCode}")
+  }
+  
+  // get the feed content
+  def bldr = new StringBuilder()
+  InputStreamReader inStream = new InputStreamReader((InputStream)conn.getContent(),'utf-8');
+  BufferedReader buff = new BufferedReader(inStream)
+  while ((line= buff.readLine())!= null) {
+    bldr.append(line)
+    bldr.append('\n')
+  }
+  conn.disconnect()
+  return bldr.toString()
+}
+
   ////////////////////////
  //// Channel Update ////
 ////////////////////////
@@ -58,9 +121,10 @@ if (   node['Node Type'] == 'RSSchannel'
   def feedXml=null
   try {
      // Download the groovy way
-     feedXml = node.link.text.toURL().getText([
-                                                requestProperties: ['User-Agent': 'Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1)']
-                                              ],'utf-8')
+     //feedXml = node.link.text.toURL().getText([
+     //                                           requestProperties: ['User-Agent': 'Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1)']
+     //                                         ],'utf-8')
+     feedXml = downloadFeedContent(node.link.text.toURL())
      def slurper = new XmlSlurper()
      slurper.setFeature("http://apache.org/xml/features/disallow-doctype-decl", false) 
      slurper.setFeature("http://apache.org/xml/features/nonvalidating/load-external-dtd", false);
