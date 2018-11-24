@@ -1,9 +1,9 @@
-<map version="freeplane 1.6.0">
+<map version="freeplane 1.7.0">
 <!--To view this file, download free mind mapping software Freeplane from http://freeplane.sourceforge.net -->
-<node TEXT="whNewsreader" ID="ID_518515863" CREATED="1498925178169" MODIFIED="1507638498591" LINK="https://github.com/WetHat/freeplane-addon-newsreader/wiki" BACKGROUND_COLOR="#97c7dc" STYLE="combined" UNIFORM_SHAPE="true" MAX_WIDTH="360.0 pt" MIN_WIDTH="20.0 pt">
+<node TEXT="whNewsreader" ID="ID_518515863" CREATED="1498925178169" MODIFIED="1543057457023" LINK="https://github.com/WetHat/freeplane-addon-newsreader/wiki" BACKGROUND_COLOR="#97c7dc" STYLE="combined" UNIFORM_SHAPE="true" MAX_WIDTH="360.0 pt" MIN_WIDTH="20.0 pt">
 <font SIZE="16" BOLD="true" ITALIC="true"/>
 <hook NAME="MapStyle">
-    <properties fit_to_viewport="false;" show_icon_for_attributes="true" show_note_icons="true" edgeColorConfiguration="#808080ff,#000000ff,#ff0033ff,#009933ff,#3333ffff,#ff6600ff,#cc00ccff,#ffbf00ff,#00ff99ff,#0099ffff,#996600ff,#000000ff,#cc0066ff,#33ff00ff,#ff9999ff,#0000ccff,#cccc00ff,#0099ccff,#006600ff,#ff00ccff,#00cc00ff,#0066ccff,#00ffffff"/>
+    <properties show_icon_for_attributes="true" fit_to_viewport="false;" show_note_icons="true" edgeColorConfiguration="#808080ff,#000000ff,#ff0033ff,#009933ff,#3333ffff,#ff6600ff,#cc00ccff,#ffbf00ff,#00ff99ff,#0099ffff,#996600ff,#000000ff,#cc0066ff,#33ff00ff,#ff9999ff,#0000ccff,#cccc00ff,#0099ccff,#006600ff,#ff00ccff,#00cc00ff,#0066ccff,#00ffffff"/>
 
 <map_styles>
 <stylenode LOCALIZED_TEXT="styles.root_node" STYLE="oval" UNIFORM_SHAPE="true" VGAP_QUANTITY="24.0 pt" TEXT_SHORTENED="true">
@@ -115,7 +115,7 @@
 <hook NAME="AutomaticEdgeColor" COUNTER="0" RULE="FOR_COLUMNS"/>
 <attribute_layout NAME_WIDTH="95.16521818049237 pt" VALUE_WIDTH="345.60000286599865 pt"/>
 <attribute NAME="name" VALUE="whNewsreader"/>
-<attribute NAME="version" VALUE="0.2.1"/>
+<attribute NAME="version" VALUE="0.2.2"/>
 <attribute NAME="author" VALUE="WetHat"/>
 <attribute NAME="freeplaneVersionFrom" VALUE="1.5.20"/>
 <attribute NAME="freeplaneVersionTo" VALUE=""/>
@@ -239,7 +239,7 @@
   </body>
 </html>
 </richcontent>
-<node TEXT="0.2.1" ID="ID_695397740" CREATED="1507635405146" MODIFIED="1507635498519"><richcontent TYPE="NOTE">
+<node TEXT="0.2.2" ID="ID_1461934486" CREATED="1543057259167" MODIFIED="1543057442848"><richcontent TYPE="NOTE">
 
 <html>
   <head>
@@ -247,10 +247,26 @@
   </head>
   <body>
     <p>
-      Improved Atom feed handling. If&#160;&#160;no content is available, try summary instead
+      Migrated to HTTPUrlConnection to get finer grained control of the request properties.Tweaked&#160;&#160;request properties to improve feed download success rate
     </p>
   </body>
 </html>
+
+</richcontent>
+</node>
+<node TEXT="0.2.1" ID="ID_695397740" CREATED="1507635405146" MODIFIED="1543057302998"><richcontent TYPE="NOTE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      Improved Atom feed handling. If&#160;&#160;no content is available, trying summary instead
+    </p>
+  </body>
+</html>
+
 </richcontent>
 </node>
 <node TEXT="0.2.0" ID="ID_327385482" CREATED="1499693389052" MODIFIED="1500045048480"><richcontent TYPE="NOTE">
@@ -849,7 +865,6 @@
     </ul>
   </body>
 </html>
-
 </richcontent>
 </node>
 </node>
