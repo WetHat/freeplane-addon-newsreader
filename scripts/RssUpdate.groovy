@@ -13,12 +13,11 @@ SANITIZER = Pattern.compile('<script.*</script>',Pattern.CASE_INSENSITIVE|Patter
  * Get the hyperlink described by an XML element.
  *
  * Attempts to extract the url for the href attribute. If that is not available uses the element text content.
- * @returns url string
+ * @returns url URL encoded string
 */
 String getLinkURL(link) {
-  def href = link.@href
-  def retval = href == null || href.isEmpty() ? link.toString() :  href.text()
-  return retval
+  def href = URLEncoder.encode((link.@href).text(),"UTF-8")
+  return href == null || href.isEmpty() ? link.toString() :  href
 }
 
 /**
@@ -34,7 +33,7 @@ String getSanitizedHTML(htmlFragment) {
 }
 
 /**
- * Store expection details in the node text and note.
+ * Store expection details in the node core text and note.
  *
  * @param node The node object of the failing channel.
  * @param exception the exception which occurend during channel update.
@@ -51,18 +50,20 @@ void setNodeException(node,exception) {
   * @returns open connection
   */
 HttpURLConnection connectToRSSFeed(URL url) {
-     HttpURLConnection conn = url.openConnection()
-      conn.followRedirects = false
-      conn.requestMethod = 'GET'
-      conn.addRequestProperty('User-Agent','Mozilla/5.0 (Windows NT 6.1; WOW64; rv:25.0) Gecko/20100101 Firefox/25.0')
-      conn.addRequestProperty('Accept','text/xml,application/xml')
-      conn.addRequestProperty('Accept-Charset','utf-8')
-      conn.addRequestProperty('Connection','keep-alive')
-      conn
+    HttpURLConnection conn = url.openConnection()
+    conn.followRedirects = false
+    conn.requestMethod = 'GET'
+    conn.addRequestProperty('User-Agent','Mozilla/5.0 (Windows NT 6.1; WOW64; rv:25.0) Gecko/20100101 Firefox/25.0')
+    conn.addRequestProperty('Accept','text/xml,application/xml')
+    conn.addRequestProperty('Accept-Charset','utf-8')
+    conn.addRequestProperty('Connection','keep-alive')
+    conn
 } 
 /**
  * Download feed content following redirects and applying cookies if needed
-*/
+ * @param url web loacation to download the feed content from.
+ * @returns feed content
+ */
 String downloadFeedContent(URL url) {
   HttpURLConnection conn = connectToRSSFeed(url)
  
@@ -132,13 +133,13 @@ if (   node['Node Type'] == 'RSSchannel'
   }
   catch (all) {
     setNodeException(node,all)
-    if (feedXml != null) {
+    if (feedXml) {
       logger.severe(feedXml)
     }
   
   }
 
-  if (rss != null) {
+  if (rss) {
     // Put current items in a map so that we can know what is already there
     def itemMap = new HashMap<String,Object>()
     
@@ -235,7 +236,7 @@ if (   node['Node Type'] == 'RSSchannel'
               def attrs = childNode.attributes
               attrs.add('Node Type','RSSitem')
               attrs.add('New','yes')
-              attrs.add('PubDate', it.published)
+              attrs.add('PubDate', it.updated ?: it.published)
               attrs.add('ID', id)
               attrs.optimizeWidths()
             }
