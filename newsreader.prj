@@ -1,6 +1,6 @@
 [Project ID]
 Signature=UE Proj: v.1
-Unicode=1
+Unicode=2
 [Project Information]
 Use Relative Directory=1
 Relative to Project File=1
@@ -18,3 +18,11 @@ Create Tagfile=0
 4=.\scripts\
 5=.gitignore
 6=..\freeplane-addon-newsreader.wiki\
+[FilesU]
+0=README.md
+1=index.md
+2=version.properties
+3=License.md
+4=.+AFw-scripts+AFw-
+5=.gitignore
+6=..+AFw-freeplane-addon-newsreader.wiki+AFw-
