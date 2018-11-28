@@ -13,11 +13,31 @@ SANITIZER = Pattern.compile('<script.*</script>',Pattern.CASE_INSENSITIVE|Patter
  * Get the hyperlink described by an XML element.
  *
  * Attempts to extract the url for the href attribute. If that is not available uses the element text content.
+ * @param item news item
  * @returns url URL encoded string
-*/
-String getLinkURL(link) {
-  def href = URLEncoder.encode((link.@href).text(),"UTF-8")
-  return href == null || href.isEmpty() ? link.toString() :  href
+ */
+String getLinkURL(item) {
+  // inspect links to find one which points to the article.
+  def links = item.link.findAll { it.@type =="text/html"}
+  
+  def articleLink
+  if (links.size() == 0) {
+    // pick the first link
+    articleLink = item.link
+  } else if (links.size() == 1) {
+    articleLink = links.first()
+  } else {
+    // more than one text link inspect the relationship attribute
+    // to find one that may point to the article
+    logger.info("${links.size} article link candidates")
+    links = links.findAll{ it.@rel.text() == 'alternate' }
+    if (links.size() > 0) {
+        articleLink = links.first()
+    } else {
+        articleLink = item.link
+    }
+  }
+  URLEncoder.encode(articleLink.@href.text() ?: articleLink.text() ,"UTF-8")
 }
 
 /**
@@ -51,7 +71,7 @@ void setNodeException(node,exception) {
   */
 HttpURLConnection connectToRSSFeed(URL url) {
     HttpURLConnection conn = url.openConnection()
-    conn.followRedirects = false
+    conn.followRedirects = true
     conn.requestMethod = 'GET'
     conn.addRequestProperty('User-Agent','Mozilla/5.0 (Windows NT 6.1; WOW64; rv:25.0) Gecko/20100101 Firefox/25.0')
     conn.addRequestProperty('Accept','text/xml,application/xml')
@@ -73,7 +93,7 @@ String downloadFeedContent(URL url) {
     logger.info("${url} -> ${conn.responseCode}")
     if (conn.headerFields.'Location') {
       url = conn.headerFields.Location.first().toURL()
-      
+      logger.info("Redirected to: $url")
       String cookie = null
       if (conn.headerFields.'Set-Cookie') {
 	      cookie = conn.headerFields.'Set-Cookie'.first().toString()
@@ -144,7 +164,7 @@ if (   node['Node Type'] == 'RSSchannel'
     def itemMap = new HashMap<String,Object>()
     
     node.children.each{
-      itemMap.put(it['ID'].getText(),it)
+      itemMap.put(it['ID'].text,it)
       //logger.info("id: ${it['ID']} (${it['ID'].getText().getClass().getName()})")
     }
     
@@ -173,7 +193,7 @@ if (   node['Node Type'] == 'RSSchannel'
           node.note = rss.channel.description
           rss.channel.item.each{
             def title = it.title
-            def url = getLinkURL(it.link)
+            def url = getLinkURL(it)
             // compute node id
             def id = it.guid
             logger.info("id: ${id.getClass().getName()}; url: ${url}")
@@ -214,7 +234,7 @@ if (   node['Node Type'] == 'RSSchannel'
           node.note = rss.subtitle
           rss.entry.each{
             def title = it.title
-            def url   = getLinkURL(it.link)
+            def url   = getLinkURL(it)
             
             // compute node id
             def id = it.id
