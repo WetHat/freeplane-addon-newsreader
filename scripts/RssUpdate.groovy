@@ -49,7 +49,7 @@ String getLinkURL(item) {
 String getSanitizedHTML(htmlFragment) {
   // remove garbage
   def sanitized = SANITIZER.matcher(htmlFragment.text()).replaceAll('')
-  return '<html><body>' + sanitized + '</body></html>'
+  '<html><body>' + sanitized + '</body></html>'
 }
 
 /**
@@ -64,7 +64,7 @@ void setNodeException(node,exception) {
   node.note = "<html><body><p><b>Channel url</b>: ${node.link.text}</p><p><b>Exception</b>:</p><p>${exception}</p></body></html>"
 }
 
-/** Open a connection to a RSS feed
+/** Establish a connection to a RSS feed
   *
   * @param feed URL
   * @returns open connection
@@ -126,7 +126,7 @@ String downloadFeedContent(URL url) {
     bldr.append('\n')
   }
   conn.disconnect()
-  return bldr.toString()
+  bldr.toString()
 }
 
   ////////////////////////
