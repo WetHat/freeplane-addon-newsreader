@@ -1,6 +1,6 @@
 <map version="freeplane 1.7.0">
 <!--To view this file, download free mind mapping software Freeplane from http://freeplane.sourceforge.net -->
-<node TEXT="whNewsreader" ID="ID_518515863" CREATED="1498925178169" MODIFIED="1543057457023" LINK="https://github.com/WetHat/freeplane-addon-newsreader/wiki" BACKGROUND_COLOR="#97c7dc" STYLE="combined" UNIFORM_SHAPE="true" MAX_WIDTH="360.0 pt" MIN_WIDTH="20.0 pt">
+<node TEXT="whNewsreader" ID="ID_518515863" CREATED="1498925178169" MODIFIED="1543402085568" LINK="https://github.com/WetHat/freeplane-addon-newsreader/wiki" BACKGROUND_COLOR="#97c7dc" STYLE="combined" UNIFORM_SHAPE="true" MAX_WIDTH="360.0 pt" MIN_WIDTH="20.0 pt">
 <font SIZE="16" BOLD="true" ITALIC="true"/>
 <hook NAME="MapStyle">
     <properties show_icon_for_attributes="true" fit_to_viewport="false;" show_note_icons="true" edgeColorConfiguration="#808080ff,#000000ff,#ff0033ff,#009933ff,#3333ffff,#ff6600ff,#cc00ccff,#ffbf00ff,#00ff99ff,#0099ffff,#996600ff,#000000ff,#cc0066ff,#33ff00ff,#ff9999ff,#0000ccff,#cccc00ff,#0099ccff,#006600ff,#ff00ccff,#00cc00ff,#0066ccff,#00ffffff"/>
@@ -115,7 +115,7 @@
 <hook NAME="AutomaticEdgeColor" COUNTER="0" RULE="FOR_COLUMNS"/>
 <attribute_layout NAME_WIDTH="95.16521818049237 pt" VALUE_WIDTH="345.60000286599865 pt"/>
 <attribute NAME="name" VALUE="whNewsreader"/>
-<attribute NAME="version" VALUE="0.2.2"/>
+<attribute NAME="version" VALUE="0.2.3"/>
 <attribute NAME="author" VALUE="WetHat"/>
 <attribute NAME="freeplaneVersionFrom" VALUE="1.5.20"/>
 <attribute NAME="freeplaneVersionTo" VALUE=""/>
@@ -156,7 +156,7 @@
   </body>
 </html>
 </richcontent>
-<node TEXT="description" POSITION="left" ID="ID_572094998" CREATED="1498925202742" MODIFIED="1499880767364"><richcontent TYPE="NOTE">
+<node TEXT="description" POSITION="left" ID="ID_572094998" CREATED="1498925202742" MODIFIED="1543059675313"><richcontent TYPE="NOTE">
 
 <html>
   <head>
@@ -226,7 +226,7 @@
 <font BOLD="false"/>
 </node>
 </node>
-<node TEXT="changes" POSITION="left" ID="ID_1937288719" CREATED="1498925202742" MODIFIED="1499880767366"><richcontent TYPE="NOTE">
+<node TEXT="changes" POSITION="left" ID="ID_1937288719" CREATED="1498925202742" MODIFIED="1543059675313"><richcontent TYPE="NOTE">
 
 <html>
   <head>
@@ -239,6 +239,29 @@
   </body>
 </html>
 </richcontent>
+<node TEXT="0.2.3" ID="ID_509496827" CREATED="1543402093708" MODIFIED="1543402212178"><richcontent TYPE="NOTE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <ul>
+      <li>
+        handling redirects
+      </li>
+      <li>
+        code cleanup
+      </li>
+      <li>
+        attempting to find the article link when item has multiple links
+      </li>
+    </ul>
+  </body>
+</html>
+
+</richcontent>
+</node>
 <node TEXT="0.2.2" ID="ID_1461934486" CREATED="1543057259167" MODIFIED="1543057442848"><richcontent TYPE="NOTE">
 
 <html>
@@ -251,7 +274,6 @@
     </p>
   </body>
 </html>
-
 </richcontent>
 </node>
 <node TEXT="0.2.1" ID="ID_695397740" CREATED="1507635405146" MODIFIED="1543057302998"><richcontent TYPE="NOTE">
@@ -266,7 +288,6 @@
     </p>
   </body>
 </html>
-
 </richcontent>
 </node>
 <node TEXT="0.2.0" ID="ID_327385482" CREATED="1499693389052" MODIFIED="1500045048480"><richcontent TYPE="NOTE">
@@ -359,7 +380,7 @@
 </richcontent>
 </node>
 </node>
-<node TEXT="license" POSITION="left" ID="ID_1849949559" CREATED="1498925202742" MODIFIED="1499880767368"><richcontent TYPE="NOTE">
+<node TEXT="license" POSITION="left" ID="ID_1849949559" CREATED="1498925202742" MODIFIED="1543059675313"><richcontent TYPE="NOTE">
 
 <html>
   <head>
@@ -415,7 +436,7 @@
 <font BOLD="false"/>
 </node>
 </node>
-<node TEXT="preferences.xml" POSITION="left" ID="ID_950925147" CREATED="1498925202758" MODIFIED="1499880767371"><richcontent TYPE="NOTE">
+<node TEXT="preferences.xml" POSITION="left" ID="ID_950925147" CREATED="1498925202758" MODIFIED="1543059675329"><richcontent TYPE="NOTE">
 
 <html>
   <head>
@@ -432,7 +453,7 @@
 </html>
 </richcontent>
 </node>
-<node TEXT="default.properties" POSITION="left" ID="ID_924550804" CREATED="1498925202778" MODIFIED="1499880767373"><richcontent TYPE="NOTE">
+<node TEXT="default.properties" POSITION="left" ID="ID_924550804" CREATED="1498925202778" MODIFIED="1543059675329"><richcontent TYPE="NOTE">
 
 <html>
   <head>
@@ -446,7 +467,7 @@
 </html>
 </richcontent>
 </node>
-<node TEXT="translations" POSITION="left" ID="ID_1784907094" CREATED="1498925202780" MODIFIED="1499880767376"><richcontent TYPE="NOTE">
+<node TEXT="translations" POSITION="left" ID="ID_1784907094" CREATED="1498925202780" MODIFIED="1543059675329"><richcontent TYPE="NOTE">
 
 <html>
   <head>
@@ -481,7 +502,7 @@
 <attribute NAME="addons.RSS" VALUE="RSS News"/>
 </node>
 </node>
-<node TEXT="deinstall" POSITION="left" ID="ID_546131246" CREATED="1498925202827" MODIFIED="1499880767377" MAX_WIDTH="360.0 pt"><richcontent TYPE="NOTE">
+<node TEXT="deinstall" POSITION="left" ID="ID_546131246" CREATED="1498925202827" MODIFIED="1543059675329" MAX_WIDTH="360.0 pt"><richcontent TYPE="NOTE">
 
 <html>
   <head>
@@ -505,7 +526,7 @@
 <attribute NAME="delete" VALUE="${installationbase}/resources/images/whNewsreader.png"/>
 <attribute NAME="delete" VALUE="${installationbase}/addons/${name}/scripts/RssShowDocs.groovy"/>
 </node>
-<node TEXT="scripts" POSITION="right" ID="ID_487239182" CREATED="1498925202843" MODIFIED="1499880767383"><richcontent TYPE="NOTE">
+<node TEXT="scripts" POSITION="right" ID="ID_487239182" CREATED="1498925202843" MODIFIED="1543059675329"><richcontent TYPE="NOTE">
 
 <html>
   <head>
@@ -687,7 +708,7 @@
 <attribute NAME="execute_scripts_without_network_restriction" VALUE="true"/>
 </node>
 </node>
-<node TEXT="lib" POSITION="right" ID="ID_1600315449" CREATED="1498925202858" MODIFIED="1499880767442"><richcontent TYPE="NOTE">
+<node TEXT="lib" POSITION="right" ID="ID_1600315449" CREATED="1498925202858" MODIFIED="1543059675344"><richcontent TYPE="NOTE">
 
 <html>
   <head>
@@ -725,7 +746,7 @@
 </html>
 </richcontent>
 </node>
-<node TEXT="zips" POSITION="right" ID="ID_1885171384" CREATED="1498925202858" MODIFIED="1499880767446" MAX_WIDTH="240.0 pt"><richcontent TYPE="NOTE">
+<node TEXT="zips" POSITION="right" ID="ID_1885171384" CREATED="1498925202858" MODIFIED="1543059675344" MAX_WIDTH="240.0 pt"><richcontent TYPE="NOTE">
 
 <html>
   <head>
@@ -763,7 +784,7 @@
 </html>
 </richcontent>
 </node>
-<node TEXT="images" POSITION="right" ID="ID_1329813446" CREATED="1498925202878" MODIFIED="1499880767450"><richcontent TYPE="NOTE">
+<node TEXT="images" POSITION="right" ID="ID_1329813446" CREATED="1498925202878" MODIFIED="1543059675344"><richcontent TYPE="NOTE">
 
 <html>
   <head>
