@@ -239,6 +239,21 @@
   </body>
 </html>
 </richcontent>
+<node TEXT="0.2.4" ID="ID_1530244945" CREATED="1544428791228" MODIFIED="1544428861691"><richcontent TYPE="NOTE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      non-xml Junk removed from the feed prolog
+    </p>
+  </body>
+</html>
+
+</richcontent>
+</node>
 <node TEXT="0.2.3" ID="ID_509496827" CREATED="1543402093708" MODIFIED="1543402212178"><richcontent TYPE="NOTE">
 
 <html>
