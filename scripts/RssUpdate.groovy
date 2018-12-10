@@ -126,7 +126,9 @@ String downloadFeedContent(URL url) {
     bldr.append('\n')
   }
   conn.disconnect()
-  bldr.toString()
+  // get rid of any illegal prolog
+  def gti = bldr.indexOf("<")
+  gti > 0 ? bldr.substring(gti) : bldr.toString()
 }
 
   ////////////////////////
