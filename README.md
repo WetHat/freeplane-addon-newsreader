@@ -1,6 +1,6 @@
 [![GitHub release](https://img.shields.io/github/release/WetHat/freeplane-addon-newsreader)](https://GitHub.com/WetHat/freeplane-addon-newsreader/releases/)
 [![Github all releases](https://img.shields.io/github/downloads/WetHat/freeplane-addon-newsreader/total.svg)](https://GitHub.com/WetHat/freeplane-addon-newsreader/releases/)
-[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://GitHub.com/WetHat/freeplane-addon-newsreader/graphs/commit-activity)
+[![Maintenance](https://img.shields.io/badge/Maintained%3F-no-red.svg)](https://GitHub.com/WetHat/freeplane-addon-newsreader/graphs/commit-activity)
 # Freeplane addon: WetHat NewsReader
 
 The _WetHat NewsReader_ add-on for the open source mind mapping and knowledge management
